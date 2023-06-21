@@ -1,13 +1,30 @@
-# Zendesk Insights Mod for Steampipe
+---
+repository: "https://github.com/turbot/steampipe-mod-zendesk-insights"
+---
 
-A Zendesk dashboarding tool that can be used to view dashboards and reports across your Zendesk instance.
+# Zendesk Insights Mod
+
+Create dashboards and reports for your Zendesk organizations, tickets, etc using Steampipe.
 
 ## Overview
 
 Dashboards can help answer questions like:
+
 - How old are the unresolved tickets?
 - Which organizations have opened the most tickets?
 - Are users following 2fa best practices?
+
+## References
+
+[Zendesk](https://www.zendesk.com/) is a customer service SaaS platform with 200,000+ customers. It enables organizations to provide customer service via text, mobile, phone, email, live chat, social media.
+
+[Steampipe](https://steampipe.io) is an open source CLI to instantly query cloud APIs using SQL.
+
+[Steampipe Mods](https://steampipe.io/docs/reference/mod-resources#mod) are collections of `named queries`, codified `controls` that can be used to test current configuration of your cloud resources against a desired configuration, and `dashboards` that organize and display key pieces of information.
+
+## Documentation
+
+- **[Dashboards →](https://hub.steampipe.io/mods/turbot/zendesk_insights/dashboards)**
 
 ## Getting started
 
@@ -57,7 +74,7 @@ If you have an idea for additional dashboards or just want to help maintain and 
 
 - **[Join our Slack community →](https://steampipe.io/community/join)** and hang out with other Mod developers.
 
-Please see the [contribution guidelines](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/steampipe-mod-aws-insights/blob/main/LICENSE).
+Please see the [contribution guidelines](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/steampipe-mod-github-insights/blob/main/LICENSE).
 
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
