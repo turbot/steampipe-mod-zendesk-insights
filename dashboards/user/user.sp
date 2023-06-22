@@ -14,6 +14,8 @@ query "user_count" {
     select
       count(*) as "Users"
     from
-      zendesk_user;
+      zendesk_user
+    where
+      active;
   EOQ
 }
