@@ -144,6 +144,7 @@ query "ticket_unsolved_table" {
       o.name as "Organization",
       t.id || ' ' || t.subject as "Ticket",
       t.status as "Status",
+      t.priority as "Priority",
       u.name as "Assignee",
       now()::date - t.created_at::date as "Age in days",
       now()::date - t.updated_at::date as "Days since last update",

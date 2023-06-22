@@ -66,6 +66,7 @@ query "ticket_unassigned_table" {
       o.name as "Organization",
       t.id || ' ' || t.subject as "Ticket",
       t.status as "Status",
+      t.priority as "Priority",
       date_part('day', now() - t.created_at) as "Age in days",
       o.url as org_url,
       t.url

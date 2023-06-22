@@ -66,6 +66,7 @@ query "ticket_unsolved_overdue_table" {
       o.name as "Organization",
       t.id || ' ' || t.subject as "Ticket",
       t.status as "Status",
+      t.priority as "Priority",
       u.name as "Assignee",
       now()::date - t.due_at::date as "Days overdue",
       o.url as org_url,
