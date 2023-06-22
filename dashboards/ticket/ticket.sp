@@ -9,6 +9,15 @@ locals {
   }
 }
 
+query "ticket_total_count" {
+  sql = <<-EOQ
+    select
+      count(*) as "Tickets"
+    from
+      zendesk_ticket;
+  EOQ
+}
+
 query "ticket_unsolved_count" {
   sql = <<-EOQ
     select
