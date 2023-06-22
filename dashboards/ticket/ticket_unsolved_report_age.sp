@@ -1,6 +1,6 @@
-dashboard "ticket_age_report" {
-  title = "Zendesk Ticket Age Report"
-  documentation = file("./dashboards/ticket/docs/ticket_report_age.md")
+dashboard "ticket_unsolved_age_report" {
+  title = "Zendesk Unsolved Ticket Age Report"
+  documentation = file("./dashboards/ticket/docs/ticket_unsolved_report_age.md")
 
   tags = merge(local.ticket_common_tags, {
     type     = "Report"

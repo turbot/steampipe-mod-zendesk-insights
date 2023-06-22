@@ -1,6 +1,6 @@
 dashboard "ticket_unassigned_report" {
-  title = "Zendesk Unassigned Tickets Report"
-  documentation = file("./dashboards/ticket/docs/ticket_report_unassigned.md")
+  title = "Zendesk Unassigned Unsolved Tickets Report"
+  documentation = file("./dashboards/ticket/docs/ticket_unsolved_report_unassigned.md")
 
   tags = merge(local.ticket_common_tags, {
     type = "Report"
@@ -13,7 +13,7 @@ dashboard "ticket_unassigned_report" {
     }
 
     card {
-      query = query.ticket_unassigned_count
+      query = query.ticket_unsolved_unassigned_count
       width = 2
     }
   }
@@ -21,7 +21,7 @@ dashboard "ticket_unassigned_report" {
   container {
     table {
       title = "Unassigned Tickets"
-      query = query.ticket_unassigned_table
+      query = query.ticket_unsolved_unassigned_table
 
       column "url" {
         display = "none"
@@ -42,7 +42,7 @@ dashboard "ticket_unassigned_report" {
   }
 }
 
-query "ticket_unassigned_count" {
+query "ticket_unsolved_unassigned_count" {
   sql = <<-EOQ
     select
       'Unassigned' as label,
@@ -60,7 +60,7 @@ query "ticket_unassigned_count" {
   EOQ
 }
 
-query "ticket_unassigned_table" {
+query "ticket_unsolved_unassigned_table" {
   sql = <<-EOQ
     select
       o.name as "Organization",

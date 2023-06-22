@@ -1,6 +1,6 @@
 dashboard "ticket_overdue_report" {
-  title = "Zendesk Overdue Tickets Report"
-  documentation = file("./dashboards/ticket/docs/ticket_report_overdue.md")
+  title = "Zendesk Overdue Unsolved Tickets Report"
+  documentation = file("./dashboards/ticket/docs/ticket_unsolved_report_overdue.md")
 
   tags = merge(local.ticket_common_tags, {
     type = "Report"
