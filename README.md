@@ -50,7 +50,24 @@ This mod uses the credentials configured in the [Steampipe Zendesk plugin](https
 
 ### Configuration
 
-No extra configuration is required.
+Several reports/dashboards have [input variables](https://steampipe.io/docs/using-steampipe/mod-variables) that can be configured to better match your environment and requirements. Each variable has a default defined in its source file, e.g., `dashboards/user/user_report_inactive.sp`, but these can be overwritten in several ways:
+
+- Copy and rename the `steampipe.spvars.example` file to `steampipe.spvars`, and then modify the variable values inside that file
+- Pass in a value on the command line:
+
+  ```shell
+  steampipe dashboard --var=user_inactive_days=90
+  ```
+
+- Set an environment variable:
+
+  ```shell
+  SP_VAR_user_inactive_days=90 steampipe dashboard
+  ```
+
+  - Note: When using environment variables, if the variable is defined in `steampipe.spvars` or passed in through the command line, either of those will take precedence over the environment variable value. For more information on variable definition precedence, please see the link below.
+
+These are only some of the ways you can set variables. For a full list, please see [Passing Input Variables](https://steampipe.io/docs/using-steampipe/mod-variables#passing-input-variables).
 
 ## Contributing
 
