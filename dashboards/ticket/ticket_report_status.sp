@@ -45,7 +45,7 @@ dashboard "ticket_status_report" {
 
   container {
     table {
-      title = "Tickets"
+      title = "Ticket Statuses"
       query = query.ticket_status_table
 
       column "url" {
