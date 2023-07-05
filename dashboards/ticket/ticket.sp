@@ -28,3 +28,14 @@ query "ticket_unsolved_count" {
       status not in ('solved', 'closed');
   EOQ
 }
+
+query "ticket_resolved_count" {
+  sql = <<-EOQ
+    select
+      count(*) as "Resolved Tickets"
+    from
+      zendesk_ticket
+    where
+      status in ('solved', 'closed');
+  EOQ
+}
